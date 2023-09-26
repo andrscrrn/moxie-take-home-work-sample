@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className="flex justify-center items-center h-full">
       <Link href="/booking">
-        <Button label="Book with Moxie" />
+        <Button label="Click to Book" />
       </Link>
     </main>
   )

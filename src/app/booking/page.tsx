@@ -1,5 +1,15 @@
+import { CardsContainer } from '@/components/CardsContainer/CardsContainer'
+import { BottomBar } from '@/components/BottomBar/BottomBar'
+import { Card } from '@/components/Card/Card'
+
 export default function Booking() {
   return (
-    <main className="flex justify-center items-center h-full">Booking</main>
+    <>
+      <CardsContainer>
+        <Card className="w-2/5">Gold Spa</Card>
+        <Card className="w-3/5">Enter your details below</Card>
+      </CardsContainer>
+      <BottomBar />
+    </>
   )
 }
