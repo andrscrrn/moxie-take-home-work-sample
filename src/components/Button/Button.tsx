@@ -1,27 +1,13 @@
 import React from 'react'
+import { cn } from '../../utils/cn'
 
 interface ButtonProps {
-  /**
-   * Is this the principal call to action on the page?
-   */
   primary?: boolean
-  /**
-   * How large should the button be?
-   */
   size?: 'small' | 'medium' | 'large'
-  /**
-   * Button contents
-   */
   label: string
-  /**
-   * Optional click handler
-   */
   onClick?: () => void
 }
 
-/**
- * Primary UI component for user interaction
- */
 export const Button = ({
   primary = false,
   size = 'medium',
@@ -30,7 +16,10 @@ export const Button = ({
 }: ButtonProps) => {
   return (
     <button
-      className="bg-violet text-white rounded-2xl py-4 px-9"
+      className={cn(`bg-black text-white rounded-2xl py-4 px-9`, {
+        'bg-violet': primary,
+        'py-3 px-5': size === 'medium',
+      })}
       type="button"
       {...props}
     >
