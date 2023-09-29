@@ -2,13 +2,11 @@ import React from 'react'
 import { cn } from '../../utils/cn'
 
 interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
-  primary?: boolean
   size?: 'small' | 'medium' | 'large'
   label: string
 }
 
 export const Button = ({
-  primary = false,
   size = 'medium',
   label,
   className,
@@ -17,9 +15,9 @@ export const Button = ({
   return (
     <button
       className={cn(
-        `bg-black text-white rounded-2xl py-4 px-9`,
+        `bg-violet hover:bg-dark-violet text-white rounded-2xl py-4 px-9`,
+        'transition-colors ease-in-out duration-250',
         {
-          'bg-violet': primary,
           'py-3 px-5': size === 'medium',
         },
         className,

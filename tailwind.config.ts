@@ -10,7 +10,9 @@ const config: Config = {
     extend: {
       colors: {
         violet: '#8A1D96',
+        'dark-violet': '#601469',
         gray: '#F4F4F6',
+        'dark-gray': '#BEBEC9',
       },
     },
   },
