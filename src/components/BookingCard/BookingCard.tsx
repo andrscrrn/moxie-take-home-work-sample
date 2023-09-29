@@ -7,7 +7,10 @@ interface BookingCardProps extends CardProps {}
 
 export const BookingCard = ({ className, ...props }: BookingCardProps) => {
   return (
-    <Card className={cn('w-full px-16 py-12 gap-4', className)} {...props}>
+    <Card
+      className={cn('w-full p-4 lg:px-16 lg:py-12 gap-4', className)}
+      {...props}
+    >
       <h2 className="text-lg font-bold leading-normal tracking-tight">
         Enter your details below
       </h2>

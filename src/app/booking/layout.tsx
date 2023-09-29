@@ -7,11 +7,16 @@ export default function BookingLayout({
   children: React.ReactNode
 }) {
   return (
-    <>
+    <div className="px-4 lg:px-0 pb-28">
       {children}
       <BottomBar>
-        <Button label="Continue" primary size="large" />
+        <Button
+          className="w-full lg:w-auto"
+          label="Continue"
+          primary
+          size="large"
+        />
       </BottomBar>
-    </>
+    </div>
   )
 }

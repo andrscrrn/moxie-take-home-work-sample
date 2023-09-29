@@ -11,14 +11,19 @@ export const Button = ({
   primary = false,
   size = 'medium',
   label,
+  className,
   ...props
 }: ButtonProps) => {
   return (
     <button
-      className={cn(`bg-black text-white rounded-2xl py-4 px-9`, {
-        'bg-violet': primary,
-        'py-3 px-5': size === 'medium',
-      })}
+      className={cn(
+        `bg-black text-white rounded-2xl py-4 px-9`,
+        {
+          'bg-violet': primary,
+          'py-3 px-5': size === 'medium',
+        },
+        className,
+      )}
       type="button"
       {...props}
     >

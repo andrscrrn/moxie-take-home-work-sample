@@ -12,12 +12,12 @@ export const BottomBar = ({
   return (
     <div
       className={cn(
-        'flex fixed bottom-0 h-[88px] w-full bg-white justify-center items-center',
+        'flex fixed bottom-0 left-0 h-[88px] w-full bg-white justify-center lg:justify-end items-center px-4',
         'shadow-[0_4px_15px_0_rgba(56,19,60,0.25)]',
         className,
       )}
     >
-      <div className="flex w-[1200px] flex-row-reverse">{children}</div>
+      {children}
     </div>
   )
 }
