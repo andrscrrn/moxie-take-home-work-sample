@@ -8,6 +8,9 @@ export default function BookingLayout({
 }) {
   return (
     <div className="px-4 lg:px-0 pb-28">
+      <h1 className="text-center text-neutral-900 text-lg font-bold leading-normal tracking-tight my-3 lg:my-0 lg:hidden">
+        Book appointment
+      </h1>
       {children}
       <BottomBar>
         <Button
