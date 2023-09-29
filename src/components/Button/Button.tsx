@@ -1,11 +1,10 @@
 import React from 'react'
 import { cn } from '../../utils/cn'
 
-interface ButtonProps {
+interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   primary?: boolean
   size?: 'small' | 'medium' | 'large'
   label: string
-  onClick?: () => void
 }
 
 export const Button = ({
