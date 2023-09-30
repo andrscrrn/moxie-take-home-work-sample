@@ -17,15 +17,15 @@ export const MedSpaCard = ({ className, ...props }: MedSpaCard) => {
           width={80}
           height={80}
         />
-        <h2 className="text-neutral-900 text-lg font-bold leading-snug tracking-tight">
+        <h2 className="text-lg font-bold leading-snug tracking-tight">
           Gold Spa
         </h2>
       </div>
       <div className="flex flex-col gap-4">
         <MedSpaCardItem label="Address">
-          <div>2525 Camino del Rio S</div>
-          <div>Suite 315 Room 8</div>
-          <div>San Diego, CA 92108</div>
+          <p>2525 Camino del Rio S</p>
+          <p>Suite 315 Room 8</p>
+          <p>San Diego, CA 92108</p>
         </MedSpaCardItem>
         <MedSpaCardItem label="Email">
           <a className="text-fuchsia-800" href="mailto:goldspa@gmail.com">
