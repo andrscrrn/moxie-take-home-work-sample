@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { cn } from '@/utils/cn'
+import { cn } from '../../utils/cn'
 
 interface InputProps extends React.HTMLAttributes<HTMLInputElement> {
   label?: string

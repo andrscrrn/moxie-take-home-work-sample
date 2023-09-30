@@ -1,5 +1,5 @@
-import { BookingCard } from '@/components/BookingCard/BookingCard'
-import { MedSpaCard } from '@/components/MedSpaCard/MedSpaCard'
+import { BookingCard } from './components/BookingCard/BookingCard'
+import { MedSpaCard } from './components/MedSpaCard/MedSpaCard'
 
 export default function Booking() {
   return (

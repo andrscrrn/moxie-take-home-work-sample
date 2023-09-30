@@ -12,7 +12,7 @@ export default function BookingLayout({
         Book appointment
       </h1>
       {children}
-      <BottomBar>
+      <BottomBar className="fixed bottom-0 left-0">
         <Button className="w-full lg:w-auto" label="Continue" size="large" />
       </BottomBar>
     </div>
