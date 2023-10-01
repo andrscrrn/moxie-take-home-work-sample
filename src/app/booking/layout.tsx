@@ -8,7 +8,7 @@ export default function BookingLayout({
 }) {
   return (
     <div className="px-4 pb-28">
-      <h1 className="text-center text-lg font-bold tracking-tight my-3 lg:hidden">
+      <h1 className="my-3 text-center text-lg font-bold tracking-tight lg:hidden">
         Book appointment
       </h1>
       {children}

@@ -15,10 +15,10 @@ export const Button = ({
   return (
     <button
       className={cn(
-        `bg-violet hover:bg-dark-violet text-white rounded-2xl py-4 px-9`,
-        'transition-colors ease-in-out duration-250',
+        `rounded-2xl bg-violet px-9 py-4 text-white hover:bg-dark-violet`,
+        'duration-250 transition-colors ease-in-out',
         {
-          'py-3 px-5': size === 'small',
+          'px-5 py-3': size === 'small',
         },
         className,
       )}

@@ -8,7 +8,7 @@ export const Card = ({ className = '', children, ...props }: CardProps) => {
   return (
     <div
       className={cn(
-        ' bg-white rounded-xl border border-zinc-200 flex-col items-start inline-flex',
+        ' inline-flex flex-col items-start rounded-xl border border-zinc-200 bg-white',
         className,
       )}
       {...props}

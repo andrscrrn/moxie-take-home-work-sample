@@ -8,8 +8,8 @@ interface MedSpaCard extends CardProps {}
 
 export const MedSpaCard = ({ className, ...props }: MedSpaCard) => {
   return (
-    <Card className={cn('p-4 w-full gap-6', className)} {...props}>
-      <div className="flex flex-col items-center mx-auto">
+    <Card className={cn('w-full gap-6 p-4', className)} {...props}>
+      <div className="mx-auto flex flex-col items-center">
         <Image
           className="mb-4"
           alt="Gold Spa Logo"

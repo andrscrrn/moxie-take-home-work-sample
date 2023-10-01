@@ -12,7 +12,7 @@ export const BottomBar = ({
   return (
     <div
       className={cn(
-        'flex h-20 w-full bg-white justify-center lg:justify-end items-center px-4',
+        'flex h-20 w-full items-center justify-center bg-white px-4 lg:justify-end',
         'shadow-[0_4px_15px_0_rgba(56,19,60,0.25)]',
         className,
       )}

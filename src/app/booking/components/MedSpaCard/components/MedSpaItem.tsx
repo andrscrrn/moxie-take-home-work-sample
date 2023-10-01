@@ -9,7 +9,7 @@ export const MedSpaCardItem = ({
 }: MedSpaCardItemProps) => {
   return (
     <div className="flex" {...props}>
-      <div className="w-[85px] mr-4 text-neutral-400">{label}</div>
+      <div className="mr-4 w-[85px] text-neutral-400">{label}</div>
       <div>{children}</div>
     </div>
   )

@@ -10,7 +10,7 @@ export const Input = ({ className, label, ...props }: InputProps) => {
   const inputElement = (
     <input
       className={cn(
-        'w-full p-3 bg-white rounded-xl border border-zinc-400 justify-between items-start inline-flex',
+        'inline-flex w-full items-start justify-between rounded-xl border border-zinc-400 bg-white p-3',
         className,
       )}
       {...props}
@@ -18,8 +18,8 @@ export const Input = ({ className, label, ...props }: InputProps) => {
   )
   if (label) {
     return (
-      <label className="flex flex-col w-full">
-        <span className="text-[#60606C] text-sm font-semibold leading-snug">
+      <label className="flex w-full flex-col">
+        <span className="text-sm font-semibold leading-snug text-[#60606C]">
           {label}
         </span>
         {inputElement}
