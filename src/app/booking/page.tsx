@@ -1,48 +1,23 @@
 'use client'
 
+import React from 'react'
+import { InferType } from 'yup'
 import { useForm } from 'react-hook-form'
-import { useSearchParams } from 'next/navigation'
-import { object, string, bool, InferType } from 'yup'
+import { useSearchParams, useRouter } from 'next/navigation'
 import { yupResolver } from '@hookform/resolvers/yup'
 
-import { SpaInformation } from '../../components/SpaInformation/SpaInformation'
-import { Checkbox } from '@/components/Checkbox/Checkbox'
-import { Card } from '@/components/Card/Card'
-import { Input } from '@/components/Input/Input'
-import { TextArea } from '@/components/TextArea/TextArea'
 import { Button } from '@/components/Button/Button'
+import { Card } from '@/components/Card/Card'
+import { Checkbox } from '@/components/Checkbox/Checkbox'
+import { Input } from '@/components/Input/Input'
+import { SpaInformation } from '@/components/SpaInformation/SpaInformation'
+import { TextArea } from '@/components/TextArea/TextArea'
 
+import bookingSchema from '@/schemas/booking'
 import { cn } from '@/utils/cn'
 
-let schema = object({
-  fullName: string().required('please enter your full name'),
-  email: string().email('please enter a valid email address').required(),
-  phone: string()
-    .matches(
-      /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/,
-      'phone number is not valid',
-    )
-    .required(),
-  visitReason: string().required(),
-  creditCardNumber: string()
-    .matches(
-      /^(?:3[47]\d{13}|(?:4|5|6)\d{15})$/,
-      'credit card number is not valid',
-    )
-    .required(),
-  creditCardExpiration: string()
-    .matches(/^(0[1-9]|1[0-2])\s*\/\s*\d{2}$/, 'expiration date is not valid')
-    .required(),
-  creditCardCVV: string()
-    .matches(/^\d{3,4}$/, 'CVV is not valid')
-    .required(),
-  billingZipCode: string()
-    .matches(/^\d{5}(?:[-\s]\d{4})?$/, 'zip code is not valid')
-    .required(),
-  acceptTerms: bool().oneOf([true], 'accept terms'),
-}).required()
-
 export default function Booking() {
+  const router = useRouter()
   const searchParams = useSearchParams()
   const step = searchParams.get('step')
 
@@ -54,10 +29,13 @@ export default function Booking() {
     handleSubmit,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(schema),
+    resolver: yupResolver(bookingSchema),
   })
 
-  const onSubmit = (data: InferType<typeof schema>) => console.log(data)
+  const onSubmit = (data: InferType<typeof bookingSchema>) => {
+    console.log('onSubmitData:', data)
+    router.replace(`/booking/confirmation`)
+  }
 
   return (
     <form

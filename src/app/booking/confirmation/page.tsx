@@ -2,12 +2,12 @@
 
 import Image from 'next/image'
 
-import { Card, CardProps } from '@/components/Card/Card'
-import { SpaInformation } from '../../../components/SpaInformation/SpaInformation'
+import { Card } from '@/components/Card/Card'
+import { SpaInformation } from '@/components/SpaInformation/SpaInformation'
 
 export default function Booking() {
   return (
-    <div className="mx-auto flex max-w-[542px] items-start gap-7 lg:mt-16 lg:flex-col">
+    <div className="mx-auto flex max-w-[542px] flex-col items-start gap-7 lg:mt-16">
       <Card className="flex w-full items-center gap-6 p-4 lg:w-full lg:px-16 lg:py-12">
         <Image
           className="mb-4"
