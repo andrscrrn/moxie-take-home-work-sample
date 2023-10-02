@@ -3,9 +3,12 @@ import { Input } from '@/components/Input/Input'
 import { TextArea } from '@/components/TextArea/TextArea'
 import { cn } from '@/utils/cn'
 
-interface BookingCardProps extends CardProps {}
+interface ContactInformationProps extends CardProps {}
 
-export const BookingCard = ({ className, ...props }: BookingCardProps) => {
+export const ContactInformation = ({
+  className,
+  ...props
+}: ContactInformationProps) => {
   return (
     <Card
       className={cn('w-full gap-4 p-4 lg:px-16 lg:py-12', className)}

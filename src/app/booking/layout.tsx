@@ -13,7 +13,7 @@ export default function BookingLayout({
 }) {
   const searchParams = useSearchParams()
   const step = searchParams.get('step')
-  const isCreditCardStep = step === 'credit-card'
+  const isCreditCardStep = step === 'payment'
   return (
     <div className="px-4 pb-28">
       <h1 className="my-3 text-center text-lg font-bold tracking-tight lg:hidden">
@@ -23,7 +23,7 @@ export default function BookingLayout({
       <BottomBar className="fixed bottom-0 left-0">
         <Link
           href={`/booking?step=${
-            isCreditCardStep ? 'confirmation' : 'credit-card'
+            isCreditCardStep ? 'confirmation' : 'payment'
           }`}
         >
           <Button className="w-full lg:w-auto" label="Continue" size="large" />

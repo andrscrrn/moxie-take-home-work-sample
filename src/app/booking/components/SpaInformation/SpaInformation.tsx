@@ -1,12 +1,12 @@
 import Image from 'next/image'
 
 import { Card, CardProps } from '@/components/Card/Card'
-import { MedSpaCardItem } from './components/MedSpaItem'
+import { SpaInformationItem } from './components/SpaInformationItem'
 import { cn } from '@/utils/cn'
 
-interface MedSpaCard extends CardProps {}
+interface SpaInformation extends CardProps {}
 
-export const MedSpaCard = ({ className, ...props }: MedSpaCard) => {
+export const SpaInformation = ({ className, ...props }: SpaInformation) => {
   return (
     <Card className={cn('w-full gap-6 p-4', className)} {...props}>
       <div className="mx-auto flex flex-col items-center">
@@ -23,21 +23,21 @@ export const MedSpaCard = ({ className, ...props }: MedSpaCard) => {
         </h2>
       </div>
       <div className="flex flex-col gap-4">
-        <MedSpaCardItem label="Address">
+        <SpaInformationItem label="Address">
           <p>2525 Camino del Rio S</p>
           <p>Suite 315 Room 8</p>
           <p>San Diego, CA 92108</p>
-        </MedSpaCardItem>
-        <MedSpaCardItem label="Email">
+        </SpaInformationItem>
+        <SpaInformationItem label="Email">
           <a className="text-fuchsia-800" href="mailto:goldspa@gmail.com">
             goldspa@gmail.com
           </a>
-        </MedSpaCardItem>
-        <MedSpaCardItem label="Phone">
+        </SpaInformationItem>
+        <SpaInformationItem label="Phone">
           <a className="text-fuchsia-800" href="tel:+11 123 4567 222">
             +11 123 4567 222
           </a>
-        </MedSpaCardItem>
+        </SpaInformationItem>
       </div>
     </Card>
   )

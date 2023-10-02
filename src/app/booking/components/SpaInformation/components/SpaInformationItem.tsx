@@ -1,12 +1,12 @@
-interface MedSpaCardItemProps extends React.HTMLAttributes<HTMLDivElement> {
+interface SpaInformationItemProps extends React.HTMLAttributes<HTMLDivElement> {
   label: string
 }
 
-export const MedSpaCardItem = ({
+export const SpaInformationItem = ({
   label,
   children,
   ...props
-}: MedSpaCardItemProps) => {
+}: SpaInformationItemProps) => {
   return (
     <div className="flex" {...props}>
       <div className="mr-4 w-[85px] text-neutral-400">{label}</div>

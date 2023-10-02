@@ -4,12 +4,12 @@ import { Checkbox } from '@/components/Checkbox/Checkbox'
 import { Input } from '@/components/Input/Input'
 import { cn } from '@/utils/cn'
 
-interface CreditCardInfoProps extends CardProps {}
+interface PaymentInformationProps extends CardProps {}
 
-export const CreditCardInfo = ({
+export const PaymentInformation = ({
   className,
   ...props
-}: CreditCardInfoProps) => {
+}: PaymentInformationProps) => {
   return (
     <Card
       className={cn('w-full gap-6 p-4 lg:px-16 lg:py-12', className)}

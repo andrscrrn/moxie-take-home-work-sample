@@ -3,12 +3,9 @@ import Image from 'next/image'
 import { Card, CardProps } from '@/components/Card/Card'
 import { cn } from '@/utils/cn'
 
-interface ConfirmationCardProps extends CardProps {}
+interface ConfirmationProps extends CardProps {}
 
-export const ConfirmationCard = ({
-  className,
-  ...props
-}: ConfirmationCardProps) => {
+export const Confirmation = ({ className, ...props }: ConfirmationProps) => {
   return (
     <Card
       className={cn(
