@@ -1,3 +1,6 @@
+'use client'
+
+import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 
 import { BottomBar } from '@/components/BottomBar/BottomBar'
@@ -8,6 +11,9 @@ export default function BookingLayout({
 }: {
   children: React.ReactNode
 }) {
+  const searchParams = useSearchParams()
+  const step = searchParams.get('step')
+  const isCreditCardStep = step === 'credit-card'
   return (
     <div className="px-4 pb-28">
       <h1 className="my-3 text-center text-lg font-bold tracking-tight lg:hidden">
@@ -15,7 +21,11 @@ export default function BookingLayout({
       </h1>
       {children}
       <BottomBar className="fixed bottom-0 left-0">
-        <Link href="/booking?step=credit-card">
+        <Link
+          href={`/booking?step=${
+            isCreditCardStep ? 'confirmation' : 'credit-card'
+          }`}
+        >
           <Button className="w-full lg:w-auto" label="Continue" size="large" />
         </Link>
       </BottomBar>

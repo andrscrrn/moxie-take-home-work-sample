@@ -5,20 +5,48 @@ import { useSearchParams } from 'next/navigation'
 import { BookingCard } from './components/BookingCard/BookingCard'
 import { MedSpaCard } from './components/MedSpaCard/MedSpaCard'
 import { CreditCardInfo } from './components/CreditCardInfo/CreditCardInfo'
+import { ConfirmationCard } from './components/ConfirmationCard/ConfirmationCard'
+
+import { cn } from '@/utils/cn'
 
 export default function Booking() {
   const searchParams = useSearchParams()
   const step = searchParams.get('step')
-  const showCreditCard = step === 'credit-card'
+  const isInitialState = step === null
+  const isCreditCardStep = step === 'credit-card'
+  const isConfirmationStep = step === 'confirmation'
 
   return (
-    <div className="mx-auto flex max-w-screen-xl flex-col items-start gap-7 lg:mt-16 lg:flex-row">
-      <MedSpaCard className="w-full lg:w-2/5" />
-      {showCreditCard ? (
-        <CreditCardInfo className="w-full lg:w-3/5" />
-      ) : (
-        <BookingCard className="w-full lg:w-3/5" />
+    <div
+      className={cn(
+        'mx-auto flex max-w-screen-xl flex-col items-start gap-7 lg:mt-16 lg:flex-row',
+        {
+          'lg:flex-col-reverse': isConfirmationStep,
+          'max-w-[542px]': isConfirmationStep,
+        },
       )}
+    >
+      <MedSpaCard
+        className={cn('w-full lg:w-2/5', {
+          'lg:w-full': isConfirmationStep,
+        })}
+      />
+      <BookingCard
+        className={cn('hidden w-full lg:w-3/5', {
+          flex: isInitialState,
+        })}
+      />
+      <CreditCardInfo
+        className={cn('hidden w-full lg:w-3/5', {
+          flex: isCreditCardStep,
+        })}
+      />
+      <ConfirmationCard
+        className={cn('hidden w-full lg:w-3/5', {
+          flex: isConfirmationStep,
+          'lg:w-full': isConfirmationStep,
+        })}
+      />
     </div>
   )
 }
