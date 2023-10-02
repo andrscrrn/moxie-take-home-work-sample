@@ -118,7 +118,7 @@ export default function Booking() {
           {...register('billingZipCode')}
         />
         <Checkbox
-          label=" We ask that you please reschedule or cancel at least 24 hours before the
+          label="We ask that you please reschedule or cancel at least 24 hours before the
         beginning of your appointment or you may be charged a cancellation fee
         of $50. In the event of emergency, contact us directly. Your card will
         held in case of late cancellation and for future purchases. It will not

@@ -1,8 +1,8 @@
 import Image from 'next/image'
 
-import { Card, CardProps } from '@/components/Card/Card'
+import { Card, CardProps } from '../../components/Card/Card'
 import { SpaInformationItem } from './components/SpaInformationItem'
-import { cn } from '@/utils/cn'
+import { cn } from '../../utils/cn'
 
 interface SpaInformation extends CardProps {}
 
