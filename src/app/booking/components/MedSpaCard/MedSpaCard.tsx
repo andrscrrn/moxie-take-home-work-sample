@@ -16,6 +16,7 @@ export const MedSpaCard = ({ className, ...props }: MedSpaCard) => {
           src="/gold-spa-logo.png"
           width={80}
           height={80}
+          priority
         />
         <h2 className="text-lg font-bold leading-snug tracking-tight">
           Gold Spa

@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import { BottomBar } from '@/components/BottomBar/BottomBar'
 import { Button } from '@/components/Button/Button'
 
@@ -13,7 +15,9 @@ export default function BookingLayout({
       </h1>
       {children}
       <BottomBar className="fixed bottom-0 left-0">
-        <Button className="w-full lg:w-auto" label="Continue" size="large" />
+        <Link href="/booking?step=credit-card">
+          <Button className="w-full lg:w-auto" label="Continue" size="large" />
+        </Link>
       </BottomBar>
     </div>
   )

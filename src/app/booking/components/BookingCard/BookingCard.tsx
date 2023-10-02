@@ -1,7 +1,7 @@
-import { Card, CardProps } from '../../../../components/Card/Card'
-import { Input } from '../../../../components/Input/Input'
-import { TextArea } from '../../../../components/TextArea/TextArea'
-import { cn } from '../../../../utils/cn'
+import { Card, CardProps } from '@/components/Card/Card'
+import { Input } from '@/components/Input/Input'
+import { TextArea } from '@/components/TextArea/TextArea'
+import { cn } from '@/utils/cn'
 
 interface BookingCardProps extends CardProps {}
 
