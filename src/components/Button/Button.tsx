@@ -1,7 +1,7 @@
 import React from 'react'
 import { cn } from '../../utils/cn'
 
-interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   size?: 'small' | 'large'
   label: string
 }
@@ -22,7 +22,6 @@ export const Button = ({
         },
         className,
       )}
-      type="button"
       {...props}
     >
       {label}

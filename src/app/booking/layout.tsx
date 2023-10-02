@@ -22,8 +22,8 @@ export default function BookingLayout({
       {children}
       <BottomBar className="fixed bottom-0 left-0">
         <Link
-          href={`/booking?step=${
-            isCreditCardStep ? 'confirmation' : 'payment'
+          href={`${
+            isCreditCardStep ? '/booking/confirmation' : '/booking?step=payment'
           }`}
         >
           <Button className="w-full lg:w-auto" label="Continue" size="large" />
